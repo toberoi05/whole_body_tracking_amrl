@@ -39,5 +39,7 @@ _build
 *.zarr
 *.npz
 
+*.vscode
+
 **/assets/
 artifacts/
