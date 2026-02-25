@@ -38,7 +38,9 @@ from isaaclab.utils import configclass
 from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
 from isaaclab.utils.math import axis_angle_from_quat, quat_conjugate, quat_mul, quat_slerp
 
-from whole_body_tracking.robots.spot import SPOT_WBT_CFG
+from isaaclab_assets.robots.spot import SPOT_CFG
+
+SPOT_WBT_CFG = SPOT_CFG.replace(soft_joint_pos_limit_factor=0.9)
 
 # Output path: source/whole_body_tracking/whole_body_tracking/assets/spot/motions/<output_name>.npz
 _REPO_ROOT = Path(__file__).resolve().parent.parent

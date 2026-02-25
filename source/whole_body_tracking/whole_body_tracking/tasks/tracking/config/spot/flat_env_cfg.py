@@ -2,7 +2,10 @@ from isaaclab.managers import SceneEntityCfg
 from isaaclab.utils import configclass
 
 from whole_body_tracking.assets import ASSET_DIR
-from whole_body_tracking.robots.spot import SPOT_ACTION_SCALE, SPOT_WBT_CFG
+from isaaclab_assets.robots.spot import SPOT_CFG
+
+SPOT_WBT_CFG = SPOT_CFG.replace(soft_joint_pos_limit_factor=0.9)
+SPOT_ACTION_SCALE = 0.1875
 from whole_body_tracking.tasks.tracking.tracking_env_cfg import TrackingEnvCfg
 
 
