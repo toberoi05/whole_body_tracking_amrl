@@ -99,7 +99,6 @@ class MotionLoader:
         motion = motion.to(torch.float32).to(self.device)
         self.motion_base_poss_input = motion[:, :3]
         self.motion_base_rots_input = motion[:, 3:7]
-        self.motion_base_rots_input = self.motion_base_rots_input[:, [3, 0, 1, 2]]  # xyzw -> wxyz
         self.motion_dof_poss_input = motion[:, 7:]
         self.input_frames = motion.shape[0]
         self.duration = (self.input_frames - 1) * self.input_dt
