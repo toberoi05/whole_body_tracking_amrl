@@ -38,6 +38,8 @@ _build
 *.pkl
 *.zarr
 *.npz
+*.csv
+*.txt
 
 *.vscode
 
